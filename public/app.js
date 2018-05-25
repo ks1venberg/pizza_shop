@@ -1,4 +1,6 @@
+var x = 1;
 function something()
 {
-	alert ('hello everyone!!!');
+	alert (x);
+	x+=1
 }
