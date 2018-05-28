@@ -1,10 +1,21 @@
 <h2>Welcome to Pizza Shop!</h2>
 
-<% @products.each do |p| %>
-<p>
-	product
-</p>
+<!-- <div class="row">
+    <div class="col-md-3"> <img src="1"> </div>
+    <div class="col-md-3"> <img src="2"> </div>
+    <div class="col-md-3"> <img src="3"> </div>
+    <div class="col-md-3"> <img src="4"> </div>
+    <div class="col-md-3"> <img src="5"> </div>
+    ...
+    <div class="col-md-3"> <img src="50"> </div>
+</div> -->
 
-<% end %>
+<div class="row">
+	<% @products.each do |p| %>
+		<div class="col-md-3">
+			<%= p.title%>
+		</div>
+	<% end %>
+</div>
 
 <button class="btn btn-primary" onclick="something()">Click me!</button>
