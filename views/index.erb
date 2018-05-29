@@ -11,11 +11,17 @@
 </div> -->
 
 <div class="row">
+
 	<% @products.each do |p| %>
-		<div class="col-md-3">
-			<%= p.title%>
-		</div>
-	<% end %>
+		<div class="col-md-3"> 
+            <div> <%= p.title%> </div>
+            <div> <img src="<%= p.pathtoimage %>"> </div>
+            <div> <%= p.description %> </div>
+            <div> <%= p.price%> </div>
+        </div>
+    <% end %>
+
 </div>
 
+<br />
 <button class="btn btn-primary" onclick="something()">Click me!</button>
