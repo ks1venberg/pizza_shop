@@ -21,8 +21,13 @@ function add_to_cart(id)
 
 		alert ("You added " + x);
 
+	var z = 0;
+		$.each(localStorage, function(key, value)
+		{z = z*1 + value});
+		alert ("Total order: " + z);
 
 }
+
 
 // 	var z = 0
 // 		Object.keys(localStorage).forEach(function(key){
