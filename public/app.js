@@ -18,4 +18,10 @@ function add_to_cart(id)
 	var x = window.localStorage.getItem(key);
 		x = x*1 + 1;
 		window.localStorage.setItem(key, x);
+
+	var z = 0
+		Object.keys(localStorage).forEach(function(key){
+   		console.log(localStorage.getItem(key));
+			z = z*1 + x;
+			alert ("You added " + z);})
 }
