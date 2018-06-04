@@ -29,6 +29,23 @@ function add_to_cart(id)
 }
 
 
+function cart_items()
+{
+		cnt = 0;
+
+	for(var=0; i < window.localStorage.length;i++)
+	{
+		var key = window.localStorage.key(i);
+		// var value = window.localStorage.getItem(key);
+
+		if(key.indexOf('product_') == 0)
+		{
+			cnt++;
+		}
+	}
+	return cnt;
+}
+
 // 	var z = 0
 // 		Object.keys(localStorage).forEach(function(key){
 //    		console.log(localStorage.getItem(key));
