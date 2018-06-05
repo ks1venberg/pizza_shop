@@ -20,12 +20,18 @@ function add_to_cart(id)
 		window.localStorage.setItem(key, x);
 		// число элементов в корзине
 		// alert ("Items in your cart " + cart_items());
-		update_cart();
+	update_cart();
 
 	// var z = 0;
 	// 	$.each(localStorage, function(key, value)
 	// 	{z = z*1 + value*1});
 	// 	alert ("Total order: " + z);
+}
+
+function update_cart()
+{
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders);
 
 }
 
@@ -46,14 +52,6 @@ function cart_items()
 	}
 	return cnt;
 }
-
-function update_cart()
-{
-	var orders = cart_get_orders();
-	$('#orders_input').val(orders);
-
-}
-
 
 function cart_get_orders()
 {
