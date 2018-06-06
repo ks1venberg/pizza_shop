@@ -21,6 +21,7 @@ function add_to_cart(id)
 		// число элементов в корзине
 		// alert ("Items in your cart " + cart_items());
 	update_cart();
+	update_orders_button();
 
 	// var z = 0;
 	// 	$.each(localStorage, function(key, value)
@@ -33,6 +34,12 @@ function update_cart()
 	var orders = cart_get_orders();
 	$('#orders_input').val(orders);
 
+}
+
+function update_orders_button()
+{
+	var text = 'Cart (' + cart_items() + ')';
+	$('#orders_button').val(text);
 }
 
 
