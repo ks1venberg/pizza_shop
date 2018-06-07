@@ -1,28 +1,21 @@
 <h2>"Check your items in cart, please"</h2>
 
-<% @products.each do |p| %>
-	<p>Pizza type: <%= p.title %></p>
-	<p>Price per one: <%= p.price %></p>
-<% end %>
-
-<br />
-<br />
-
-
-
 <div class="row">
 	
-		<div class="col-md">
+		<div class="col-md-2">
 			<% @products.each do |p| %>
             	<div>Pizza type: <%= p.title%> </div>
-            	<div>Description: <%= p.description %> </div>
             <% end %>
         </div>
-        <div class="col-md">
+        <div class="col-md-2">
         	<% @products.each do |p| %>
-        		<div> size: <%= p.size%> sm </div>
-            	<div>price: <%= p.price%> rub. </div>
+            	<div>price per 1: <%= p.price%> rub. </div>
             <% end %>
-        </div>	
+        </div>
+        <div class="col-md-2">
+<!--             <% @products.each do |p| %> -->
+                <div>count: <%=$value%></div>
+<!--              # <% end %> -->
+        </div>  
 </div>
 
