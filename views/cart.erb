@@ -50,7 +50,7 @@
   </tbody>
 </table>
 
-<form action="/confirm_order" method="POST" role="form">
+<form action="/cart" method="POST" role="form">
 
   <input name="order[orders_input]" type="hidden" value="<%= @orders_input %>" />
 
@@ -69,6 +69,6 @@
     <textarea name="order[address]" type="text" class="form-control" placeholder="Адрес"></textarea>
   </div>
 
-    <button type="submit" class="btn btn-success btn-lg">Place this order!</button>
+    <button type="submit" class="btn btn-success btn-lg">Confirm your order!</button>
 
 </form>

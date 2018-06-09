@@ -37,6 +37,13 @@ post '/cart' do
 	erb :cart
 end
 
+post '/confirm_order' do
+	@ord = Order.new params[:orders]
+		@ord.save
+
+	erb :confirm_order
+end
+
 
 def parse_orders_input orders_input
 	s1 = orders_input.split(/,/)
