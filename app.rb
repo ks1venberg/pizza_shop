@@ -40,9 +40,7 @@ post '/cart' do
 end
 
 post '/confirm_order' do
-	@ord = Order.new params[:orders]
-		@ord.save
-
+	@ord = Order.create params[:order]
 	erb :confirm_order
 end
 
