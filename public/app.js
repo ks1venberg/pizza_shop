@@ -77,6 +77,12 @@ function cart_get_orders()
 	return orders;
 }
 
+function cancel_order()
+{
+	alert('Cart is cleared');
+	return false;
+}
+
 // 	var z = 0
 // 		Object.keys(localStorage).forEach(function(key){
 //    		console.log(localStorage.getItem(key));
