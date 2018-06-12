@@ -79,6 +79,11 @@ function cart_get_orders()
 
 function cancel_order()
 {
+	window.localStorage.clear()
+	
+	update_cart();
+	update_orders_button();
+
 	alert('Cart is cleared');
 	return false;
 }
