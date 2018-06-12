@@ -25,10 +25,14 @@ get '/about' do
 end
 
 post '/cart' do
-	# @ord = Order.new params[:orders]
 	
 	@orders_input = params[:orders_input]
 	@items = parse_orders_input @orders_input
+
+	#вывод сообщения если корзина пуста
+	if @items.length ==0
+		return erb :empty_cart
+	end
 	
 	@items.each do |item|
 		#id, cnt
