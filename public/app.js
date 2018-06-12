@@ -84,7 +84,9 @@ function cancel_order()
 	update_cart();
 	update_orders_button();
 
-	alert('Cart is cleared');
+	$('#cart').text('Now cart is empty');
+
+	// alert('Cart is cleared');
 	return false;
 }
 
