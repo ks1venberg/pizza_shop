@@ -24,6 +24,11 @@ get '/about' do
 	erb :about			
 end
 
+get '/admin' do
+	@orders = Order.order ('created_at Desc')
+	erb :admin
+end
+
 post '/cart' do
 	
 	@orders_input = params[:orders_input]
