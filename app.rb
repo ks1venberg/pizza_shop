@@ -3,7 +3,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
-set :database, "sqlite3:pizzashop.db"
+# set :database, "sqlite3:pizzashop.db"
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/pshop_db')
 
 class Product < ActiveRecord::Base
 end
