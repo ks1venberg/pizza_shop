@@ -2,11 +2,12 @@ source "https://rubygems.org"
 
 ruby '2.5.3'
 
-gem "sinatra"
+gem "sinatra", "~>2.0.0"
 gem "activerecord"
 gem "sinatra-activerecord"
-gem "sinatra-contrib"
+gem "sinatra-contrib", "~>2.0.0"
 gem "pg"
+gem "rake"
 
 
 group :development do
